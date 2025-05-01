@@ -18,9 +18,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/60 z-0" />
 
       <div className="container px-6 relative z-10 text-center max-w-4xl">
-        <span className="inline-block mb-6 text-sm font-semibold text-white px-4 py-1 rounded-full bg-white/10 border border-white/20 shadow-sm">
+        {/* <span className="inline-block mb-6 text-sm font-semibold text-white px-4 py-1 rounded-full bg-white/10 border border-white/20 shadow-sm">
           Más de 50 años de experiencia
-        </span>
+        </span> */}
 
         <h1 className="text-4xl sm:text-5xl md:text-5l font-extrabold tracking-tight leading-tight">
           Servicios de <span className="text-brand-400">Topografía, Agrimensura</span> e <span className="text-brand-400">Ingeniería Civil</span> para Obras de Infraestructura
