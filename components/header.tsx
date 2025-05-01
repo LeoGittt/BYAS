@@ -1,8 +1,31 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+
+// Define NavLink component
+function NavLink({
+  href,
+  children,
+  isActive,
+}: {
+  href: string;
+  children: React.ReactNode;
+  isActive?: boolean;
+}) {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "text-sm font-medium transition-colors duration-200",
+        isActive ? "text-brand-400" : "text-white hover:text-brand-400"
+      )}
+    >
+      {children}
+    </Link>
+  );
+}
 import Link from "next/link";
-import { Menu, X, Phone, Settings} from "lucide-react";
+import { Menu, X, Phone, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,7 +38,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10); // Cambiar el valor 10 según lo que necesites
+      setIsScrolled(window.scrollY > 10);
     };
 
     const handleSectionHighlight = () => {
@@ -108,7 +131,7 @@ export default function Header() {
               color: "rgb(var(--color-brand-400))",
             }}
           >
-            <Settings className="h-6 w-6 text-brand-400" /> {/* Este es el ícono */}
+            <Settings className="h-6 w-6 text-brand-400" />
             <span>BYAS</span>
           </motion.span>
           <motion.span
@@ -135,7 +158,7 @@ export default function Header() {
           ].map((item) => (
             <motion.div key={item.href} variants={itemVariants}>
               <NavLink
-                href={`#${item.href}`}
+                href={`${item.href}`}
                 isActive={activeSection === item.href}
               >
                 {item.label}
@@ -258,7 +281,7 @@ export default function Header() {
                   ].map((item) => (
                     <MobileNavLink
                       key={item.href}
-                      href={`${item.href}`}
+                      href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       isActive={activeSection === item.href}
                     >
@@ -285,14 +308,6 @@ export default function Header() {
                       +54 3446 672227
                     </a>
                   </div>
-                  <Button asChild>
-                    <Link
-                      href="#contacto"
-                      className="w-full text-center py-2 px-4 bg-brand-400 text-vercel-950 hover:bg-brand-500 rounded-lg shadow-xl"
-                    >
-                      Contáctanos
-                    </Link>
-                  </Button>
                 </motion.div>
               </motion.div>
             </div>
@@ -303,49 +318,25 @@ export default function Header() {
   );
 }
 
-function NavLink({
-  href,
-  children,
-  isActive,
-  ...props
-}: {
-  href: string;
-  children: React.ReactNode;
-  isActive: boolean;
-}) {
-  return (
-    <Link
-      href={href}
-      {...props}
-      className={cn(
-        "text-lg font-semibold text-white hover:bg-brand-400/20 py-2 px-4 rounded-lg transition-colors",
-        isActive ? "bg-brand-400/30" : ""
-      )}
-    >
-      {children}
-    </Link>
-  );
-}
-
+// Asegúrate de tener este componente definido correctamente
 function MobileNavLink({
   href,
   children,
-  isActive,
   onClick,
-  ...props
+  isActive,
 }: {
   href: string;
   children: React.ReactNode;
-  isActive: boolean;
   onClick?: () => void;
+  isActive?: boolean;
 }) {
   return (
     <Link
       href={href}
-      {...props}
+      onClick={onClick}
       className={cn(
-        "text-lg font-semibold text-white hover:bg-brand-400/20 py-2 px-4 rounded-lg transition-colors",
-        isActive ? "bg-brand-400/30" : ""
+        "text-lg font-medium px-4 py-2 rounded transition-colors duration-200",
+        isActive ? "text-brand-400" : "text-white hover:text-brand-400"
       )}
     >
       {children}
