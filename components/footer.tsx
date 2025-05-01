@@ -1,15 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Settings } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,42 +12,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-6">
-              <span className="text-2xl font-bold">BYAS</span>
+              <Settings className="text-brand-500" />
+              <span className="text-2xl font-bold"></span>
+              BYAS
             </Link>
             <p className="text-vercel-300 mb-6 leading-relaxed">
               Servicios de Topografía, Agrimensura e Ingeniería Civil aplicados
               a Obras de Infraestructura con más de 50 años de experiencia.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="#"
-                className="bg-vercel-800/50 hover:bg-vercel-800 p-2 rounded-full transition-colors"
-              >
-                <Facebook className="h-5 w-5 text-vercel-100" />
-                <span className="sr-only">Facebook</span>
-              </a>
-              <a
-                href="#"
-                className="bg-vercel-800/50 hover:bg-vercel-800 p-2 rounded-full transition-colors"
-              >
-                <Twitter className="h-5 w-5 text-vercel-100" />
-                <span className="sr-only">Twitter</span>
-              </a>
-              <a
-                href="#"
-                className="bg-vercel-800/50 hover:bg-vercel-800 p-2 rounded-full transition-colors"
-              >
-                <Instagram className="h-5 w-5 text-vercel-100" />
-                <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="#"
-                className="bg-vercel-800/50 hover:bg-vercel-800 p-2 rounded-full transition-colors"
-              >
-                <Linkedin className="h-5 w-5 text-vercel-100" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
-            </div>
           </div>
 
           <div>
@@ -88,14 +52,7 @@ export default function Footer() {
                   <span className="mr-2">›</span> Proyectos
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="#testimonios"
-                  className="text-vercel-300 hover:text-white transition-colors flex items-center"
-                >
-                  <span className="mr-2">›</span> Testimonios
-                </Link>
-              </li>
+              
               <li>
                 <Link
                   href="#contacto"
@@ -115,7 +72,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
+                  href="servicios"
                   className="text-vercel-300 hover:text-white transition-colors flex items-center"
                 >
                   <span className="mr-2">›</span> Relevamiento Planialtimétricos
@@ -123,7 +80,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="servicios"
                   className="text-vercel-300 hover:text-white transition-colors flex items-center"
                 >
                   <span className="mr-2">›</span> Desarrollo de Urbanizaciones
@@ -131,7 +88,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="servicios"
                   className="text-vercel-300 hover:text-white transition-colors flex items-center"
                 >
                   <span className="mr-2">›</span> Agrimensura General
@@ -139,7 +96,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="servicios"
                   className="text-vercel-300 hover:text-white transition-colors flex items-center"
                 >
                   <span className="mr-2">›</span> Replanteo de Obras
@@ -147,7 +104,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="servicios"
                   className="text-vercel-300 hover:text-white transition-colors flex items-center"
                 >
                   <span className="mr-2">›</span> Cálculos Estructurales
@@ -176,9 +133,9 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-brand-400 mt-0.5" />
                 <p className="text-vercel-200">
-                  Argentina
+                  gualeguaychú
                   <br />
-                  Oficinas en todo el país
+                  entre ríos
                 </p>
               </li>
             </ul>
