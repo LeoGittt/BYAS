@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, ChevronRight } from "lucide-react";
+import { Menu, X, Phone, Settings} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,7 +15,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 10); // Cambiar el valor 10 según lo que necesites
     };
 
     const handleSectionHighlight = () => {
@@ -96,19 +96,20 @@ export default function Header() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
           ? "bg-vercel-950/95 backdrop-blur-md border-b border-vercel-800/50 py-3 shadow-lg"
-          : "bg-vercel-950/90 backdrop-blur-sm py-4"
+          : "bg-transparent backdrop-blur-sm py-4"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 group z-10">
           <motion.span
-            className="text-2xl font-bold text-white transition-colors duration-300"
+            className="text-2xl font-bold text-white transition-colors duration-300 flex items-center space-x-2"
             whileHover={{
               scale: 1.05,
               color: "rgb(var(--color-brand-400))",
             }}
           >
-            BYAS
+            <Settings className="h-6 w-6 text-brand-400" /> {/* Este es el ícono */}
+            <span>BYAS</span>
           </motion.span>
           <motion.span
             className="text-sm text-vercel-300 hidden md:block"
@@ -116,7 +117,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            Ingeniería y Topografía
+            Ingeniería
           </motion.span>
         </Link>
 
@@ -302,6 +303,30 @@ export default function Header() {
   );
 }
 
+function NavLink({
+  href,
+  children,
+  isActive,
+  ...props
+}: {
+  href: string;
+  children: React.ReactNode;
+  isActive: boolean;
+}) {
+  return (
+    <Link
+      href={href}
+      {...props}
+      className={cn(
+        "text-lg font-semibold text-white hover:bg-brand-400/20 py-2 px-4 rounded-lg transition-colors",
+        isActive ? "bg-brand-400/30" : ""
+      )}
+    >
+      {children}
+    </Link>
+  );
+}
+
 function MobileNavLink({
   href,
   children,
@@ -313,32 +338,6 @@ function MobileNavLink({
   children: React.ReactNode;
   isActive: boolean;
   onClick?: () => void;
-}) {
-  return (
-    <Link
-      href={href}
-      {...props}
-      className={cn(
-        "text-lg font-semibold text-white py-3 px-6 hover:bg-brand-400/20 rounded-lg transition-colors flex items-center",
-        isActive ? "bg-brand-400/30" : ""
-      )}
-      onClick={onClick}
-    >
-      {children}
-      <ChevronRight className="ml-auto h-4 w-4 opacity-70" />
-    </Link>
-  );
-}
-
-function NavLink({
-  href,
-  children,
-  isActive,
-  ...props
-}: {
-  href: string;
-  children: React.ReactNode;
-  isActive: boolean;
 }) {
   return (
     <Link
