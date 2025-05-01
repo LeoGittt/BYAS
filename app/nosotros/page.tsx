@@ -108,7 +108,7 @@ export default function AboutSection() {
             {/* Imagen principal */}
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl mb-6">
               <img
-                src="/fotoo.jpg"
+                src="/f.jpg"
                 alt="Equipo de trabajo"
                 className="w-full h-full object-cover"
               />
