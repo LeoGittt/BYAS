@@ -62,6 +62,7 @@ export default function AboutSection() {
       id="sobre-nosotros"
       className="py-24 dark:bg-vercel-950 scroll-mt-24"
       aria-labelledby="about-heading"
+      
     >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -150,7 +151,7 @@ export default function AboutSection() {
               <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-x-4 sm:space-y-0">
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-brand-400">
-                    50+
+                    50
                   </div>
                   <div className="text-xs sm:text-xs text-vercel-400">
                     Años de experiencia
@@ -159,7 +160,7 @@ export default function AboutSection() {
                 <div className="h-4 sm:h-8 w-px bg-vercel-800" />
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-brand-400">
-                    50+
+                    10+
                   </div>
                   <div className="text-xs sm:text-xs text-vercel-400">
                     Proyectos completados
