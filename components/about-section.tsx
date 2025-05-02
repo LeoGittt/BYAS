@@ -60,7 +60,7 @@ export default function AboutSection() {
   return (
     <section
       id="sobre-nosotros"
-      className="py-24 dark:bg-vercel-950 scroll-mt-24"
+      className="py-24 bg-vercel-950 scroll-mt-24"
       aria-labelledby="about-heading"
       
     >
@@ -83,10 +83,10 @@ export default function AboutSection() {
             <motion.h2
               id="about-heading"
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white"
+              className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-brand-400"
             >
               Especialistas en <br />
-              <span className="text-gradient">
+              <span className=" text-white">
                 topografía e ingeniería civil
               </span>
             </motion.h2>

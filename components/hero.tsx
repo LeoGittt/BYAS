@@ -54,7 +54,7 @@ export default function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="border-white/30 text-white hover:bg-white/10 transition-transform duration-150 px-8 py-5 text-base font-medium rounded-xl"
+            className="  bg-vercel-900 hover:bg-gray-900 hover:text-gray-300 transition-transform duration-150 px-8 py-5 text-base font-medium rounded-xl"
           >
             <Link href="#servicios">Ver servicios</Link>
           </Button>
