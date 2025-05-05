@@ -138,7 +138,7 @@ export default function AboutSection() {
           >
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/e.jpg?height=600&width=800"
+                src="/f.jpg?height=600&width=800"
                 alt="Ingenieros de BYAS trabajando en una obra de infraestructura"
                 className="w-full h-full object-cover"
               />
@@ -148,25 +148,25 @@ export default function AboutSection() {
               variants={statsVariants}
               className="absolute -bottom-6 -left-6 bg-vercel-900 p-1 sm:p-2 rounded-lg shadow-lg border border-vercel-800"
             >
-              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-x-4 sm:space-y-0">
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-brand-400">
-                    50
-                  </div>
-                  <div className="text-xs sm:text-xs text-vercel-400">
-                    Años de experiencia
-                  </div>
-                </div>
-                <div className="h-4 sm:h-8 w-px bg-vercel-800" />
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-brand-400">
-                    10+
-                  </div>
-                  <div className="text-xs sm:text-xs text-vercel-400">
-                    Proyectos completados
-                  </div>
-                </div>
-              </div>
+              <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-x-3 sm:space-y-0">
+  <div className="text-center">
+    <div className="text-base sm:text-lg font-semibold text-brand-400">
+      50
+    </div>
+    <div className="text-[10px] sm:text-xs text-vercel-400">
+      Años de experiencia
+    </div>
+  </div>
+  <div className="h-3 sm:h-6 w-px bg-vercel-800" />
+  <div className="text-center">
+    <div className="text-base sm:text-lg font-semibold text-brand-400">
+      10+
+    </div>
+    <div className="text-[10px] sm:text-xs text-vercel-400">
+      Proyectos completados
+    </div>
+  </div>
+</div>
             </motion.div>
           </motion.div>
         </div>
