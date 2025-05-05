@@ -42,7 +42,7 @@ export default function AboutSection() {
   return (
     <section
       id="sobre-nosotros"
-      className="pt-32 pb-24 dark:bg-vercel-950 scroll-mt-24"
+      className="pt-32 pb-24 bg-vercel-950 scroll-mt-24"
       aria-labelledby="about-heading"
     >
       <div className="container mx-auto px-4">
@@ -63,7 +63,7 @@ export default function AboutSection() {
               className="text-3xl md:text-4xl font-bold mb-6 leading-tight text-white"
             >
               Conformado por un equipo de <br />
-              <span className="text-gradient">profesionales comprometidos</span>
+              <span className=" text-brand-400">profesionales comprometidos</span>
             </h2>
 
             <p className="text-vercel-300 text-lg mb-8">
